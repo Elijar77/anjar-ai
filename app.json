@@ -1,1 +1,43 @@
-{"expo":{"name":"ANJAR","slug":"anjarnative","version":"1.0.0","orientation":"portrait","scheme":"anjar","userInterfaceStyle":"dark","splash":{"backgroundColor":"#020609"},"android":{"package":"com.anjar.family","versionCode":1,"jsEngine":"jsc","adaptiveIcon":{"backgroundColor":"#020609"},"permissions":["android.permission.RECORD_AUDIO","android.permission.INTERNET","android.permission.WAKE_LOCK"]},"plugins":[["expo-build-properties",{"android":{"kotlinVersion":"2.1.0","compileSdkVersion":34,"targetSdkVersion":34,"minSdkVersion":24}}]],"extra":{"eas":{"projectId":"60c75ef9-6888-4811-b7fb-2aecea272eb2"}}}}
+{
+  "expo": {
+    "name": "ANJAR",
+    "slug": "anjarnative",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "anjar",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": false,
+    "splash": {
+      "backgroundColor": "#020609"
+    },
+    "android": {
+      "package": "com.anjar.family",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#020609"
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.INTERNET",
+        "android.permission.WAKE_LOCK"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 35,
+            "targetSdkVersion": 35,
+            "minSdkVersion": 24
+          }
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "60c75ef9-6888-4811-b7fb-2aecea272eb2"
+      }
+    }
+  }
+}
