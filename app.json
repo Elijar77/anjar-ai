@@ -14,6 +14,7 @@
       "package": "com.anjar.family",
       "versionCode": 1,
       "adaptiveIcon": {
+        "foregroundImage": "./adaptive-icon.png",
         "backgroundColor": "#020609"
       },
       "permissions": [
@@ -38,6 +39,7 @@
       "eas": {
         "projectId": "60c75ef9-6888-4811-b7fb-2aecea272eb2"
       }
-    }
+    },
+    "icon": "./icon.png"
   }
 }
