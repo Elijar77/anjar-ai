@@ -185,7 +185,7 @@ function SetupWizard({onDone}){
       });
       if(r.ok){
         const ab=await r.arrayBuffer();
-        const uint8=new Uint8Array(ab);let binary="";const chunk=8192;for(let i=0;i<uint8.length;i+=chunk){binary+=String.fromCharCode(...uint8.subarray(i,i+chunk));}const b64=btoa(binary);
+        const b64=btoa(String.fromCharCode(...new Uint8Array(ab)));
         const path=FileSystem.cacheDirectory+'test.mp3';
         await FileSystem.writeAsStringAsync(path,b64,{encoding:FileSystem.EncodingType.Base64});
         const {sound}=await Audio.Sound.createAsync({uri:path});
@@ -501,4 +501,3 @@ const st=StyleSheet.create({
   rst:{marginTop:10,borderWidth:1,borderColor:'rgba(255,84,112,.4)',borderRadius:3,paddingVertical:9,alignItems:'center'},
   rstT:{fontSize:12,letterSpacing:2,color:C.danger},
 });
-
