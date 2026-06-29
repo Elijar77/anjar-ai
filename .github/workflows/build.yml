@@ -18,11 +18,10 @@ jobs:
           distribution: 'temurin'
       - uses: android-actions/setup-android@v3
       - run: npm install --legacy-peer-deps
-      - run: npx expo prebuild --platform android --clean
+      - run: ./node_modules/.bin/expo prebuild --platform android --clean
         env:
           EXPO_NO_TELEMETRY: 1
-      - run: chmod +x android/gradlew
-      - run: cd android && ./gradlew assembleDebug --no-daemon
+      - run: cd android && chmod +x gradlew && ./gradlew assembleDebug --no-daemon
       - uses: actions/upload-artifact@v4
         with:
           name: ANJAR-AI-APK
