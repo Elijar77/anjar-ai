@@ -19,6 +19,8 @@ jobs:
       - uses: android-actions/setup-android@v3
       - name: Install dependencies
         run: npm install --legacy-peer-deps
+      - name: Fix permissions
+        run: chmod -R +x ./node_modules/.bin/
       - name: Prebuild Android
         run: npx expo prebuild --platform android --clean
         env:
